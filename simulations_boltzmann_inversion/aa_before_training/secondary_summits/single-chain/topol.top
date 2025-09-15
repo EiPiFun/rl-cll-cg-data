@@ -1,0 +1,10 @@
+; Include chain topologies
+#include "charmm36.itp"
+#include "CLL.itp"
+
+[ system ]
+; Name
+
+[ molecules ]
+; Compound        #mols
+CLL               1

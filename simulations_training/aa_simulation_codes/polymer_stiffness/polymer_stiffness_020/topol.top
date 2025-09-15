@@ -1,0 +1,13 @@
+; Include chain topologies
+#include "charmm36.itp"
+#include "CLL.itp"
+#ifdef RELAXATION_POSRE
+#include "relaxation_posre.itp"
+#endif
+
+[ system ]
+; Name
+
+[ molecules ]
+; Compound        #mols
+CLL                 1

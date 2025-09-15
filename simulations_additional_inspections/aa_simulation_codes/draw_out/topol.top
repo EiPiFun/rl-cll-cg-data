@@ -1,0 +1,38 @@
+; Include chain topologies
+#include "forcefield/charmm36.itp"
+
+#include "forcefield/CLL.itp"
+#ifdef RELAXATION_POSRE_1
+#include "posre/relaxation_posre_1.itp"
+#endif
+#ifdef RELAXATION_POSRE_2
+#include "posre/relaxation_posre_2.itp"
+#endif
+#ifdef RELAXATION_POSRE_3
+#include "posre/relaxation_posre_3.itp"
+#endif
+#ifdef LOAD_POSRE
+#include "posre/load_posre_cll.itp"
+#endif
+
+#include "forcefield/SCL.itp"
+#ifdef RELAXATION_POSRE_1
+#include "posre/relaxation_posre_1.itp"
+#endif
+#ifdef RELAXATION_POSRE_2
+#include "posre/relaxation_posre_2.itp"
+#endif
+#ifdef RELAXATION_POSRE_3
+#include "posre/relaxation_posre_3.itp"
+#endif
+#ifdef LOAD_POSRE
+#include "posre/load_posre_scl.itp"
+#endif
+
+[ system ]
+; Name
+
+[ molecules ]
+; Compound        #mols
+CLL                24
+SCL                 1

@@ -1,0 +1,6 @@
+This is the data archive for https://arxiv.org/abs/2506.12893
+
+The models, simulation codes, processed data and plot python scripts are all included.
+
+Owing to the portability, simulation codes for both all atom and coarse grained models in different conditions are provided instead of raw trajectories. The trajectories are also available under request.
+

@@ -1,0 +1,128 @@
+suffix omp
+package omp 6
+
+units real
+atom_style full
+
+boundary p p p
+
+read_data ../inputs/coarse_grained_cellulose.data
+
+group cl1 type 1
+group cl2 type 2
+group cl3 type 3
+group cl type 1 2 3
+
+mass 1 68.0
+mass 2 60.0
+mass 3 34.0
+
+bond_style harmonic
+angle_style harmonic
+improper_style harmonic
+pair_style hybrid/overlay lj/smooth 6.0 8.0 hbond/dreiding/lj/angleoffset 4 16.0 25.0 120.0 170.0
+pair_modify pair lj/smooth shift yes
+
+special_bonds lj/coul 0.0 0.0 0.0 angle no dihedral no one/five no
+
+comm_modify mode single cutoff 16.0
+
+bond_coeff 1  65.00 5.270 # CL1-CL1
+bond_coeff 2  83.63 2.493 # CL2-CL1
+bond_coeff 3 113.95 2.066 # CL3-CL1
+
+angle_coeff 1 30.00 163.5 # CL1-CL1-CL1
+angle_coeff 2 37.57  74.2 # CL2-CL1-CL1_1
+angle_coeff 3 29.56  93.2 # CL3-CL1-CL1_1
+angle_coeff 4 26.43  90.0 # CL2-CL1-CL1_2
+angle_coeff 5 25.16 102.0 # CL3-CL1-CL1_2
+angle_coeff 6 21.72 166.3 # CL2-CL1-CL3
+
+improper_coeff 1 0.20 178.0 # CL1-CL1-CL1-CL1
+improper_coeff 2 0.18   2.3 # CL2-CL1-CL1-CL3
+improper_coeff 3 0.20   2.9 # CL3-CL1-CL1-CL2
+
+pair_coeff 1 2 hbond/dreiding/lj/angleoffset 3 i 1.4 6.0 4 6.0 7.80 135.0 173.1 # CL1-CL2
+pair_coeff 1 3 hbond/dreiding/lj/angleoffset 2 i 1.4 6.0 4 6.0 7.80 135.0 173.1 # CL1-CL3
+pair_coeff 1 1 lj/smooth 0.8 5.1 8.67 9.18                     # CL1-CL1
+pair_coeff 1 2 lj/smooth 0.8 4.1 6.97 7.38                     # CL1-CL2
+pair_coeff 1 3 lj/smooth 0.8 4.0 6.80 7.20                     # CL1-CL3
+pair_coeff 2 2 lj/smooth 0.8 5.1 8.67 9.18                     # CL2-CL2
+pair_coeff 2 3 lj/smooth 0.8 3.7 6.29 6.66                     # CL2-CL3
+pair_coeff 3 3 lj/smooth 0.8 5.1 8.67 9.18                     # CL3-CL3
+
+timer timeout 0:09:00 every 1000
+
+fix relaxation cl1 spring/self 10.0
+minimize 1.0e-4 1.0e-6 100 1000
+unfix relaxation
+reset_timestep 0
+
+fix 0 all langevin 300.0 300.0 $(4000.0*dt) 114514
+
+variable lx equal lx
+variable ly equal ly
+variable lz equal lz
+variable px equal pxx
+variable py equal pyy
+variable pz equal pzz
+
+dump 1 cl custom 1000 cl_relaxation id mol type q x y z fx fy fz
+dump_modify 1 sort id
+
+fix boxsizepressurerelaxation all ave/time 1000 1 1000 v_lx v_ly v_lz v_px v_py v_pz file box_size-pressure_relaxation mode scalar
+
+compute clmsd cl msd com yes average no
+fix clmsd cl ave/time 1000 1 1000 c_clmsd[*] file cl_msd_relaxation mode scalar
+
+#fix 1 all nve
+fix 1 all nvt temp 300.0 300.0 $(100.0*dt)
+#fix 1 all npt temp 300.0 300.0 $(100.0*dt) aniso 1.0 1.0 $(100.0*dt)
+
+velocity all create 300.0 114514
+
+timestep 2.0
+thermo 1000
+thermo_modify flush yes
+thermo_style custom step temp epair emol etotal pxx pyy pzz
+run 5000
+
+unfix 1
+
+#fix 1 all nve
+#fix 1 all nvt temp 300.0 300.0 $(100.0*dt)
+fix 1 all npt temp 300.0 300.0 $(100.0*dt) aniso 1.0 1.0 $(100.0*dt)
+
+timestep 4.0
+thermo 1000
+thermo_modify flush yes
+thermo_style custom step temp epair emol etotal pxx pyy pzz
+run 10000
+
+unfix 1
+
+undump 1
+unfix boxsizepressurerelaxation
+uncompute clmsd
+unfix clmsd
+
+reset_timestep 0
+
+fix stretch all deform 1 y vel 0.0001
+
+dump 2 cl custom 1000 cl_stretch id mol type q x y z fx fy fz
+dump_modify 2 sort id
+
+fix boxsizepressurestretch all ave/time 1000 1 1000 v_lx v_ly v_lz v_px v_py v_pz file box_size-pressure_stretch mode scalar
+
+#fix 2 all nve
+#fix 2 all nvt temp 300.0 300.0 $(100.0*dt)
+fix 2 all npt temp 300.0 300.0 $(100.0*dt) x 1.0 1.0 $(100.0*dt) z 1.0 1.0 $(100.0*dt)
+
+timestep 12.0
+thermo 100
+thermo_modify flush yes
+thermo_style custom step temp epair emol etotal pxx pyy pzz
+run 60000
+
+

@@ -1,0 +1,28 @@
+suffix omp
+package omp 6
+
+units real
+atom_style full
+
+boundary p p p
+
+read_data ../inputs/coarse_grained_cellulose.data
+
+group cl1 type 1
+group cl2 type 2
+group cl3 type 3
+group cl type 1 2 3
+
+mass 1 68.0
+mass 2 60.0
+mass 3 34.0
+
+bond_style harmonic
+angle_style harmonic
+improper_style harmonic
+pair_style hybrid/overlay lj/smooth 6.0 8.0 hbond/dreiding/lj/angleoffset 4 16.0 25.0 120.0 170.0
+pair_modify pair lj/smooth shift yes
+
+special_bonds lj/coul 0.0 0.0 0.0 angle no dihedral no one/five no
+
+comm_modify mode single cutoff 16.0
