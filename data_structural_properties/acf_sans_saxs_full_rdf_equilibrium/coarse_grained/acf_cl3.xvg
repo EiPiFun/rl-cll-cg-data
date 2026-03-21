@@ -1,0 +1,80 @@
+# This file was created Thu Mar 19 09:01:47 2026
+# Created by:
+#                      :-) GROMACS - gmx rotacf, 2022.6 (-:
+# 
+# Executable:   /homex/home1/public/software/gromacs-cpu-2022.6/bin/gmx
+# Data prefix:  /homex/home1/public/software/gromacs-cpu-2022.6
+# Working dir:  /homex/home1/cellulose_cg/cgs
+# Command line:
+#   gmx_cpu_2022 rotacf -s coarse_grained_cellulose_slant.tpr -f cl_relaxation_nojump.gro -n index.ndx -o acf_cl3.xvg
+# gmx rotacf is part of G R O M A C S:
+#
+# Getting the Right Output Means no Artefacts in Calculating Stuff
+#
+@    title "Rotational Correlation Function"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "C(t)"
+@TYPE xy
+     0.000     1.00000
+     0.000     0.99427
+     0.000     0.99435
+     0.000     0.99452
+     0.000     0.99465
+     0.000     0.99483
+     0.000     0.99493
+     0.000     0.99497
+     0.000     0.99499
+     0.000     0.99499
+     0.000     0.99498
+     0.000     0.99501
+     0.000     0.99503
+     0.000     0.99486
+     0.000     0.99490
+     0.000     0.99497
+     0.000     0.99517
+     0.000     0.99510
+     0.000     0.99511
+     0.000     0.99520
+     0.000     0.99513
+     0.000     0.99509
+     0.000     0.99503
+     0.000     0.99509
+     0.000     0.99509
+     0.000     0.99485
+     0.000     0.99500
+     0.000     0.99507
+     0.000     0.99494
+     0.000     0.99485
+     0.000     0.99484
+     0.000     0.99473
+     0.000     0.99474
+     0.000     0.99483
+     0.000     0.99478
+     0.000     0.99491
+     0.000     0.99477
+     0.000     0.99486
+     0.000     0.99490
+     0.000     0.99492
+     0.000     0.99464
+     0.000     0.99451
+     0.000     0.99451
+     0.000     0.99453
+     0.000     0.99448
+     0.000     0.99453
+     0.000     0.99435
+     0.000     0.99431
+     0.000     0.99424
+     0.000     0.99425
+     0.000     0.99422
+     0.000     0.99397
+     0.000     0.99424
+     0.000     0.99438
+     0.000     0.99415
+     0.000     0.99429
+     0.000     0.99416
+     0.000     0.99430
+     0.000     0.99429
+     0.000     0.99425
+     0.000     0.99419
+     0.000     0.99397
+     0.000     0.99409

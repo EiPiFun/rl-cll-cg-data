@@ -1,0 +1,25 @@
+
+bond_coeff 1  65.00 5.270 # CL1-CL1
+bond_coeff 2  83.63 2.493 # CL2-CL1
+bond_coeff 3 113.95 2.066 # CL3-CL1
+
+angle_coeff 1 30.00 163.5 # CL1-CL1-CL1
+angle_coeff 2 37.57  74.2 # CL2-CL1-CL1_1
+angle_coeff 3 29.56  93.2 # CL3-CL1-CL1_1
+angle_coeff 4 26.43  90.0 # CL2-CL1-CL1_2
+angle_coeff 5 25.16 102.0 # CL3-CL1-CL1_2
+angle_coeff 6 21.72 166.3 # CL2-CL1-CL3
+
+improper_coeff 1 0.20 178.0 # CL1-CL1-CL1-CL1
+improper_coeff 2 0.18   2.3 # CL2-CL1-CL1-CL3
+improper_coeff 3 0.20   2.9 # CL3-CL1-CL1-CL2
+
+pair_coeff 1 2 hbond/dreiding/lj/angleoffset 3 i 1.4 6.0 4 6.0 7.80 135.0 173.1 # CL1-CL2
+pair_coeff 1 3 hbond/dreiding/lj/angleoffset 2 i 1.4 6.0 4 6.0 7.80 135.0 173.1 # CL1-CL3
+pair_coeff 1 1 lj/smooth 0.8 5.1 8.67 9.18                     # CL1-CL1
+pair_coeff 1 2 lj/smooth 0.8 4.1 6.97 7.38                     # CL1-CL2
+pair_coeff 1 3 lj/smooth 0.8 4.0 6.80 7.20                     # CL1-CL3
+pair_coeff 2 2 lj/smooth 0.8 5.1 8.67 9.18                     # CL2-CL2
+pair_coeff 2 3 lj/smooth 0.8 3.7 6.29 6.66                     # CL2-CL3
+pair_coeff 3 3 lj/smooth 0.8 5.1 8.67 9.18                     # CL3-CL3
+

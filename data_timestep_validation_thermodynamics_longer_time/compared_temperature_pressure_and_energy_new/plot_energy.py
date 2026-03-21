@@ -1,0 +1,45 @@
+import matplotlib.pyplot as plt
+import numpy
+import pandas
+import sys
+
+current_path=sys.path[0]+"/"
+
+chart_title = ''
+chart_xlable = 'Time (ns)'
+
+data_file_name = sys.argv[1]
+
+data_column = 4
+
+chart_ylable = 'Total Energy (kcal/mol)'
+
+try:
+    image_file_extension = sys.argv[2]
+except:
+    image_file_extension = 'png'
+
+output_image_file_name = data_file_name+'.'+image_file_extension
+
+x1 = numpy.loadtxt(data_file_name)[:,0]*0.000012
+y1 = numpy.loadtxt(data_file_name)[:,data_column]
+
+plot_box_position = plt.gca().get_position()
+x_axis_offset = 0.16
+y_axis_offset = 0.04
+plt.gca().set_position((plot_box_position.x0+x_axis_offset,plot_box_position.y0+y_axis_offset,plot_box_position.width-x_axis_offset,plot_box_position.height-y_axis_offset))
+
+plot_limit_min = numpy.min(y1)
+plt.ylim(1.2*plot_limit_min,0.8*plot_limit_min)
+
+plt.plot(x1,y1,color='orangered')
+
+plt.title(chart_title)
+
+#plt.legend(legend_array, fontsize=20)
+plt.tick_params(labelsize=20)
+plt.xlabel(chart_xlable, fontsize=20)
+plt.ylabel(chart_ylable, fontsize=20)
+
+plt.savefig(current_path+output_image_file_name)
+

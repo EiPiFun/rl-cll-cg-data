@@ -13,19 +13,20 @@ group cl2 type 2
 group cl3 type 3
 group cl type 1 2 3
 
-mass 1 68.0
-mass 2 60.0
-mass 3 34.0
-
 bond_style harmonic
 angle_style harmonic
 improper_style harmonic
 pair_style hybrid/overlay lj/smooth 6.0 8.0 hbond/dreiding/lj/angleoffset 4 16.0 25.0 120.0 170.0
 pair_modify pair lj/smooth shift yes
 
-special_bonds lj 0.0 0.0 0.0
+special_bonds lj/coul 0.0 0.0 0.0 angle no dihedral no one/five no
 
 comm_modify mode single cutoff 16.0
+
+mass 1 68.0
+mass 2 60.0
+mass 3 34.0
+
 
 bond_coeff 1 64.06 5.270 # CL1-CL1
 bond_coeff 2 82.42 2.493 # CL2-CL1
@@ -51,7 +52,7 @@ pair_coeff 2 2 lj/smooth 0.9031 5.101 10.202 10.7121                     # CL2-C
 pair_coeff 2 3 lj/smooth 0.5031 4.083  8.166  8.5743                     # CL2-CL3
 pair_coeff 3 3 lj/smooth 0.9031 5.101 10.202 10.7121                     # CL3-CL3
 
-timer timeout 3:59:00 every 1000
+timer timeout 7:59:00 every 1000
 
 fix relaxation cl1 spring/self 10.0
 minimize 1.0e-4 1.0e-6 100 1000
@@ -108,7 +109,7 @@ undump 1
 
 reset_timestep 0
 
-fix stretch all deform 1 z vel 0.00005
+fix stretch all deform 1 z vel 0.0001
 
 dump 2 cl custom 1000 cl_stretch id mol type q x y z fx fy fz
 dump_modify 2 sort id

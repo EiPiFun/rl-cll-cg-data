@@ -1,0 +1,68 @@
+# This file was created Thu Mar 19 11:42:18 2026
+# Created by:
+#                      :-) GROMACS - gmx rotacf, 2022.6 (-:
+# 
+# Executable:   /homex/home1/public/software/gromacs-cpu-2022.6/bin/gmx
+# Data prefix:  /homex/home1/public/software/gromacs-cpu-2022.6
+# Working dir:  /homex/home1/cellulose_cg/cgs_stretch
+# Command line:
+#   gmx_cpu_2022 rotacf -s coarse_grained_cellulose_slant.tpr -f cl_stretch_nojump.gro -n index.ndx -o acf_cl3.xvg
+# gmx rotacf is part of G R O M A C S:
+#
+# Glycine aRginine prOline Methionine Alanine Cystine Serine
+#
+@    title "Rotational Correlation Function"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "C(t)"
+@TYPE xy
+     0.000     1.00000
+     0.000     0.99193
+     0.000     0.98760
+     0.000     0.98312
+     0.000     0.97891
+     0.000     0.97440
+     0.000     0.96955
+     0.000     0.96494
+     0.000     0.96012
+     0.000     0.95522
+     0.000     0.95020
+     0.000     0.94532
+     0.000     0.94054
+     0.000     0.93550
+     0.000     0.93046
+     0.000     0.92566
+     0.000     0.92044
+     0.000     0.91512
+     0.000     0.90970
+     0.000     0.90453
+     0.000     0.89929
+     0.000     0.89358
+     0.000     0.88794
+     0.000     0.88210
+     0.000     0.87615
+     0.000     0.87040
+     0.000     0.86479
+     0.000     0.85898
+     0.000     0.85330
+     0.000     0.84718
+     0.000     0.84138
+     0.000     0.83547
+     0.000     0.82952
+     0.000     0.82351
+     0.000     0.81719
+     0.000     0.81089
+     0.000     0.80455
+     0.000     0.79818
+     0.000     0.79174
+     0.000     0.78511
+     0.000     0.77871
+     0.000     0.77195
+     0.000     0.76509
+     0.000     0.75851
+     0.000     0.75196
+     0.000     0.74541
+     0.000     0.73842
+     0.000     0.73110
+     0.000     0.72414
+     0.000     0.71716
+     0.000     0.70991

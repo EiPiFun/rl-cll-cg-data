@@ -1,0 +1,43 @@
+# This file was created Thu Mar 19 08:43:30 2026
+# Created by:
+#                      :-) GROMACS - gmx rotacf, 2022.6 (-:
+# 
+# Executable:   /homex/home1/public/software/gromacs-cpu-2022.6/bin/gmx
+# Data prefix:  /homex/home1/public/software/gromacs-cpu-2022.6
+# Working dir:  /homex/home1/cellulose_cg/aas
+# Command line:
+#   gmx_cpu_2022 rotacf -s coarse_grained_cellulose_slant.tpr -f coarse_grained_relaxation-1-1_nojump.gro -n index.ndx -o acf_cl2.xvg
+# gmx rotacf is part of G R O M A C S:
+#
+# Gromacs Runs One Microsecond At Cannonball Speeds
+#
+@    title "Rotational Correlation Function"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "C(t)"
+@TYPE xy
+     0.000     1.00000
+     0.000     0.99700
+     0.000     0.99677
+     0.000     0.99650
+     0.000     0.99664
+     0.000     0.99653
+     0.000     0.99643
+     0.000     0.99626
+     0.000     0.99646
+     0.000     0.99646
+     0.000     0.99667
+     0.000     0.99668
+     0.000     0.99669
+     0.000     0.99665
+     0.000     0.99677
+     0.000     0.99671
+     0.000     0.99678
+     0.000     0.99700
+     0.000     0.99679
+     0.000     0.99675
+     0.000     0.99673
+     0.000     0.99669
+     0.000     0.99671
+     0.000     0.99658
+     0.000     0.99671
+     0.000     0.99673

@@ -1,0 +1,12 @@
+#!/usr/bin/sh
+
+#SBATCH -w localhost
+#SBATCH -n 1
+#SBATCH -c n
+#SBATCH -J vXYt
+
+export CLL_CG_HOME=/homex/home2/donx/cll_cg_new/
+
+/homex/home2/donx/software/venv/bin/python3 ../coarse_grained_cellulose_coefficients_optuna_code/optuna_training.py vXY tpe 1024
+
+

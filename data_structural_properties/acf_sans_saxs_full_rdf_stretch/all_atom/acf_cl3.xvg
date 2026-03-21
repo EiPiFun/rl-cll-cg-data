@@ -1,0 +1,68 @@
+# This file was created Thu Mar 19 11:36:11 2026
+# Created by:
+#                      :-) GROMACS - gmx rotacf, 2022.6 (-:
+# 
+# Executable:   /homex/home1/public/software/gromacs-cpu-2022.6/bin/gmx
+# Data prefix:  /homex/home1/public/software/gromacs-cpu-2022.6
+# Working dir:  /homex/home1/cellulose_cg/aas_stretch
+# Command line:
+#   gmx_cpu_2022 rotacf -s coarse_grained_cellulose_slant.tpr -f coarse_grained_stretch_nojump.gro -n index.ndx -o acf_cl3.xvg
+# gmx rotacf is part of G R O M A C S:
+#
+# GRowing Old MAkes el Chrono Sweat
+#
+@    title "Rotational Correlation Function"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "C(t)"
+@TYPE xy
+     0.000     1.00000
+     0.000     0.94355
+     0.000     0.93723
+     0.000     0.90651
+     0.000     0.87443
+     0.000     0.84299
+     0.000     0.81053
+     0.000     0.77751
+     0.000     0.74447
+     0.000     0.71017
+     0.000     0.67651
+     0.000     0.64140
+     0.000     0.60704
+     0.000     0.57116
+     0.000     0.55176
+     0.000     0.51544
+     0.000     0.49529
+     0.000     0.47472
+     0.000     0.45421
+     0.000     0.43292
+     0.000     0.42891
+     0.000     0.42500
+     0.000     0.42040
+     0.000     0.41668
+     0.000     0.41221
+     0.000     0.40815
+     0.000     0.40364
+     0.000     0.39955
+     0.000     0.39528
+     0.000     0.39085
+     0.000     0.38647
+     0.000     0.38247
+     0.000     0.37772
+     0.000     0.37420
+     0.000     0.37032
+     0.000     0.36669
+     0.000     0.36317
+     0.000     0.35980
+     0.000     0.35687
+     0.000     0.35379
+     0.000     0.35081
+     0.000     0.34979
+     0.000     0.34854
+     0.000     0.34827
+     0.000     0.34649
+     0.000     0.34705
+     0.000     0.34640
+     0.000     0.34643
+     0.000     0.34744
+     0.000     0.34793
+     0.000     0.34902

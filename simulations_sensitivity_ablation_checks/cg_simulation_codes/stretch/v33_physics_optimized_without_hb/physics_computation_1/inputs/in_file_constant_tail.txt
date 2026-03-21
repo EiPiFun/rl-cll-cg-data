@@ -1,0 +1,63 @@
+timer timeout 0:09:00 every 1000
+
+fix relaxation cl1 spring/self 10.0
+minimize 1.0e-4 1.0e-6 100 1000
+unfix relaxation
+reset_timestep 0
+
+fix 0 all langevin 300.0 300.0 $(4000.0*dt) 114514
+
+variable lx equal lx
+variable ly equal ly
+variable lz equal lz
+variable px equal pxx
+variable py equal pyy
+variable pz equal pzz
+
+dump 1 cl custom 1000 cl_relaxation id mol type q x y z fx fy fz
+dump_modify 1 sort id
+
+#fix boxsizepressurerelaxation all ave/time 1000 1 1000 v_lx v_ly v_lz v_px v_py v_pz file box_size-pressure_relaxation mode scalar
+
+#compute clmsd cl msd com yes average no
+#fix clmsd cl ave/time 1000 1 1000 c_clmsd[*] file cl_msd_relaxation mode scalar
+
+#fix 1 all nve
+fix 1 all nvt temp 300.0 300.0 $(100.0*dt)
+#fix 1 all npt temp 300.0 300.0 $(100.0*dt) aniso 1.0 1.0 $(100.0*dt)
+
+velocity all create 300.0 114514
+
+timestep 2.0
+thermo 1000
+thermo_modify flush yes
+thermo_style custom step temp epair emol etotal pxx pyy pzz
+run 5000
+
+unfix 1
+
+undump 1
+#unfix boxsizepressurerelaxation
+#uncompute clmsd
+#unfix clmsd
+
+reset_timestep 0
+
+fix stretch all deform 1 z vel 0.0001
+
+dump 2 cl custom 1000 cl_stretch id mol type q x y z fx fy fz
+dump_modify 2 sort id
+
+fix boxsizepressurestretch all ave/time 1000 1 1000 v_lx v_ly v_lz v_px v_py v_pz file box_size-pressure_stretch mode scalar
+
+#fix 2 all nve
+fix 2 all nvt temp 300.0 300.0 $(100.0*dt)
+#fix 2 all npt temp 300.0 300.0 $(100.0*dt) x 1.0 1.0 $(100.0*dt) y 1.0 1.0 $(100.0*dt)
+
+timestep 4.0
+thermo 1000
+thermo_modify flush yes
+thermo_style custom step temp epair emol etotal pxx pyy pzz
+run 25000
+
+
