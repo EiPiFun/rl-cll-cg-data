@@ -1,0 +1,41 @@
+<cg>
+
+  <fmatch>
+
+    <frames_per_block>100</frames_per_block>
+
+    <constrainedLS>false</constrainedLS>
+
+  </fmatch>
+
+  <bonded>
+    <name>dihedral1</name>
+    <fmatch>
+      <min>2.42</min>
+      <max>3.06</max>
+      <step>0.08</step>
+      <out_step>0.02</out_step>
+      <shift>3.14</shift>
+    </fmatch>
+  </bonded>
+  <bonded>
+    <name>dihedral2</name>
+    <fmatch>
+      <min>-0.56</min>
+      <max>+0.40</max>
+      <step>0.08</step>
+      <out_step>0.02</out_step>
+    </fmatch>
+  </bonded>
+  <bonded>
+    <name>dihedral3</name>
+    <fmatch>
+      <min>-0.40</min>
+      <max>+0.64</max>
+      <step>0.08</step>
+      <out_step>0.02</out_step>
+    </fmatch>
+  </bonded>
+
+</cg>
+

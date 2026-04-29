@@ -1,0 +1,40 @@
+<cg>
+
+  <fmatch>
+
+    <frames_per_block>100</frames_per_block>
+
+    <constrainedLS>false</constrainedLS>
+
+  </fmatch>
+
+  <bonded>
+    <name>bond1</name>
+    <fmatch>
+      <min>0.50</min>
+      <max>0.55</max>
+      <step>0.005</step>
+      <out_step>0.001</out_step>
+    </fmatch>
+  </bonded>
+  <bonded>
+    <name>bond2</name>
+    <fmatch>
+      <min>0.23</min>
+      <max>0.28</max>
+      <step>0.005</step>
+      <out_step>0.001</out_step>
+    </fmatch>
+  </bonded>
+  <bonded>
+    <name>bond3</name>
+    <fmatch>
+      <min>0.19</min>
+      <max>0.22</max>
+      <step>0.005</step>
+      <out_step>0.001</out_step>
+    </fmatch>
+  </bonded>
+
+</cg>
+

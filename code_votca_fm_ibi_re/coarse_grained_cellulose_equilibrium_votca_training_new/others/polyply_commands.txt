@@ -1,0 +1,6 @@
+# Reference: https://vermouth-martinize.readthedocs.io/en/latest/tutorials/6_adding_residues_links/index.html
+
+for i in 10 20 30;do
+polyply gen_params -f ./force_fields/votca/clm.votca.ff -seq CLm:$i -name CLL -o ./CLL_nonperiodic_polyply_$i.itp
+done
+

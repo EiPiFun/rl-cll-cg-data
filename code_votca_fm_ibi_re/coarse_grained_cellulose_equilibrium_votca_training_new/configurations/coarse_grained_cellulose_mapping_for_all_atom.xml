@@ -1,0 +1,385 @@
+<cg_molecule>
+
+  <name>CLL</name>
+
+  <ident>CLL</ident>
+
+  <maps>
+
+    <map>
+      <name>cl1_mapping</name>
+      <type>com</type>
+      <weights> 12.0 12.0 12.0 12.0 16.0 1.0 1.0 1.0 1.0 </weights>
+    </map>
+
+    <map>
+      <name>cl2_mapping</name>
+      <type>com</type>
+      <weights> 12.0 12.0 16.0 16.0 1.0 1.0 1.0 1.0 </weights>
+    </map>
+
+    <map>
+      <name>cl3_mapping</name>
+      <type>com</type>
+      <weights> 16.0 16.0 1.0 1.0 </weights>
+    </map>
+
+  </maps>
+
+  <topology>
+
+    <cg_beads>
+
+      <cg_bead>
+        <name>1CL1</name>
+        <type>CL1</type>
+        <mapping>cl1_mapping</mapping>
+        <beads>1:CLm:C1 1:CLm:C2 1:CLm:C3 1:CLm:C4 1:CLm:O1 1:CLm:H1 1:CLm:H2 1:CLm:H3 1:CLm:H4</beads>
+      </cg_bead>
+      <cg_bead>
+        <name>1CL2</name>
+        <type>CL2</type>
+        <mapping>cl2_mapping</mapping>
+        <beads>1:CLm:C5 1:CLm:C6 1:CLm:O2 1:CLm:O3 1:CLm:H5 1:CLm:H6 1:CLm:H7 1:CLm:H8</beads>
+      </cg_bead>
+      <cg_bead>
+        <name>1CL3</name>
+        <type>CL3</type>
+        <mapping>cl3_mapping</mapping>
+        <beads>1:CLm:O4 1:CLm:O5 1:CLm:H9 1:CLm:H10</beads>
+      </cg_bead>
+      <cg_bead>
+        <name>2CL1</name>
+        <type>CL1</type>
+        <mapping>cl1_mapping</mapping>
+        <beads>2:CLm:C1 2:CLm:C2 2:CLm:C3 2:CLm:C4 2:CLm:O1 2:CLm:H1 2:CLm:H2 2:CLm:H3 2:CLm:H4</beads>
+      </cg_bead>
+      <cg_bead>
+        <name>2CL2</name>
+        <type>CL2</type>
+        <mapping>cl2_mapping</mapping>
+        <beads>2:CLm:C5 2:CLm:C6 2:CLm:O2 2:CLm:O3 2:CLm:H5 2:CLm:H6 2:CLm:H7 2:CLm:H8</beads>
+      </cg_bead>
+      <cg_bead>
+        <name>2CL3</name>
+        <type>CL3</type>
+        <mapping>cl3_mapping</mapping>
+        <beads>2:CLm:O4 2:CLm:O5 2:CLm:H9 2:CLm:H10</beads>
+      </cg_bead>
+      <cg_bead>
+        <name>3CL1</name>
+        <type>CL1</type>
+        <mapping>cl1_mapping</mapping>
+        <beads>3:CLm:C1 3:CLm:C2 3:CLm:C3 3:CLm:C4 3:CLm:O1 3:CLm:H1 3:CLm:H2 3:CLm:H3 3:CLm:H4</beads>
+      </cg_bead>
+      <cg_bead>
+        <name>3CL2</name>
+        <type>CL2</type>
+        <mapping>cl2_mapping</mapping>
+        <beads>3:CLm:C5 3:CLm:C6 3:CLm:O2 3:CLm:O3 3:CLm:H5 3:CLm:H6 3:CLm:H7 3:CLm:H8</beads>
+      </cg_bead>
+      <cg_bead>
+        <name>3CL3</name>
+        <type>CL3</type>
+        <mapping>cl3_mapping</mapping>
+        <beads>3:CLm:O4 3:CLm:O5 3:CLm:H9 3:CLm:H10</beads>
+      </cg_bead>
+      <cg_bead>
+        <name>4CL1</name>
+        <type>CL1</type>
+        <mapping>cl1_mapping</mapping>
+        <beads>4:CLm:C1 4:CLm:C2 4:CLm:C3 4:CLm:C4 4:CLm:O1 4:CLm:H1 4:CLm:H2 4:CLm:H3 4:CLm:H4</beads>
+      </cg_bead>
+      <cg_bead>
+        <name>4CL2</name>
+        <type>CL2</type>
+        <mapping>cl2_mapping</mapping>
+        <beads>4:CLm:C5 4:CLm:C6 4:CLm:O2 4:CLm:O3 4:CLm:H5 4:CLm:H6 4:CLm:H7 4:CLm:H8</beads>
+      </cg_bead>
+      <cg_bead>
+        <name>4CL3</name>
+        <type>CL3</type>
+        <mapping>cl3_mapping</mapping>
+        <beads>4:CLm:O4 4:CLm:O5 4:CLm:H9 4:CLm:H10</beads>
+      </cg_bead>
+      <cg_bead>
+        <name>5CL1</name>
+        <type>CL1</type>
+        <mapping>cl1_mapping</mapping>
+        <beads>5:CLm:C1 5:CLm:C2 5:CLm:C3 5:CLm:C4 5:CLm:O1 5:CLm:H1 5:CLm:H2 5:CLm:H3 5:CLm:H4</beads>
+      </cg_bead>
+      <cg_bead>
+        <name>5CL2</name>
+        <type>CL2</type>
+        <mapping>cl2_mapping</mapping>
+        <beads>5:CLm:C5 5:CLm:C6 5:CLm:O2 5:CLm:O3 5:CLm:H5 5:CLm:H6 5:CLm:H7 5:CLm:H8</beads>
+      </cg_bead>
+      <cg_bead>
+        <name>5CL3</name>
+        <type>CL3</type>
+        <mapping>cl3_mapping</mapping>
+        <beads>5:CLm:O4 5:CLm:O5 5:CLm:H9 5:CLm:H10</beads>
+      </cg_bead>
+      <cg_bead>
+        <name>6CL1</name>
+        <type>CL1</type>
+        <mapping>cl1_mapping</mapping>
+        <beads>6:CLm:C1 6:CLm:C2 6:CLm:C3 6:CLm:C4 6:CLm:O1 6:CLm:H1 6:CLm:H2 6:CLm:H3 6:CLm:H4</beads>
+      </cg_bead>
+      <cg_bead>
+        <name>6CL2</name>
+        <type>CL2</type>
+        <mapping>cl2_mapping</mapping>
+        <beads>6:CLm:C5 6:CLm:C6 6:CLm:O2 6:CLm:O3 6:CLm:H5 6:CLm:H6 6:CLm:H7 6:CLm:H8</beads>
+      </cg_bead>
+      <cg_bead>
+        <name>6CL3</name>
+        <type>CL3</type>
+        <mapping>cl3_mapping</mapping>
+        <beads>6:CLm:O4 6:CLm:O5 6:CLm:H9 6:CLm:H10</beads>
+      </cg_bead>
+      <cg_bead>
+        <name>7CL1</name>
+        <type>CL1</type>
+        <mapping>cl1_mapping</mapping>
+        <beads>7:CLm:C1 7:CLm:C2 7:CLm:C3 7:CLm:C4 7:CLm:O1 7:CLm:H1 7:CLm:H2 7:CLm:H3 7:CLm:H4</beads>
+      </cg_bead>
+      <cg_bead>
+        <name>7CL2</name>
+        <type>CL2</type>
+        <mapping>cl2_mapping</mapping>
+        <beads>7:CLm:C5 7:CLm:C6 7:CLm:O2 7:CLm:O3 7:CLm:H5 7:CLm:H6 7:CLm:H7 7:CLm:H8</beads>
+      </cg_bead>
+      <cg_bead>
+        <name>7CL3</name>
+        <type>CL3</type>
+        <mapping>cl3_mapping</mapping>
+        <beads>7:CLm:O4 7:CLm:O5 7:CLm:H9 7:CLm:H10</beads>
+      </cg_bead>
+      <cg_bead>
+        <name>8CL1</name>
+        <type>CL1</type>
+        <mapping>cl1_mapping</mapping>
+        <beads>8:CLm:C1 8:CLm:C2 8:CLm:C3 8:CLm:C4 8:CLm:O1 8:CLm:H1 8:CLm:H2 8:CLm:H3 8:CLm:H4</beads>
+      </cg_bead>
+      <cg_bead>
+        <name>8CL2</name>
+        <type>CL2</type>
+        <mapping>cl2_mapping</mapping>
+        <beads>8:CLm:C5 8:CLm:C6 8:CLm:O2 8:CLm:O3 8:CLm:H5 8:CLm:H6 8:CLm:H7 8:CLm:H8</beads>
+      </cg_bead>
+      <cg_bead>
+        <name>8CL3</name>
+        <type>CL3</type>
+        <mapping>cl3_mapping</mapping>
+        <beads>8:CLm:O4 8:CLm:O5 8:CLm:H9 8:CLm:H10</beads>
+      </cg_bead>
+      <cg_bead>
+        <name>9CL1</name>
+        <type>CL1</type>
+        <mapping>cl1_mapping</mapping>
+        <beads>9:CLm:C1 9:CLm:C2 9:CLm:C3 9:CLm:C4 9:CLm:O1 9:CLm:H1 9:CLm:H2 9:CLm:H3 9:CLm:H4</beads>
+      </cg_bead>
+      <cg_bead>
+        <name>9CL2</name>
+        <type>CL2</type>
+        <mapping>cl2_mapping</mapping>
+        <beads>9:CLm:C5 9:CLm:C6 9:CLm:O2 9:CLm:O3 9:CLm:H5 9:CLm:H6 9:CLm:H7 9:CLm:H8</beads>
+      </cg_bead>
+      <cg_bead>
+        <name>9CL3</name>
+        <type>CL3</type>
+        <mapping>cl3_mapping</mapping>
+        <beads>9:CLm:O4 9:CLm:O5 9:CLm:H9 9:CLm:H10</beads>
+      </cg_bead>
+      <cg_bead>
+        <name>10CL1</name>
+        <type>CL1</type>
+        <mapping>cl1_mapping</mapping>
+        <beads>10:CLm:C1 10:CLm:C2 10:CLm:C3 10:CLm:C4 10:CLm:O1 10:CLm:H1 10:CLm:H2 10:CLm:H3 10:CLm:H4</beads>
+      </cg_bead>
+      <cg_bead>
+        <name>10CL2</name>
+        <type>CL2</type>
+        <mapping>cl2_mapping</mapping>
+        <beads>10:CLm:C5 10:CLm:C6 10:CLm:O2 10:CLm:O3 10:CLm:H5 10:CLm:H6 10:CLm:H7 10:CLm:H8</beads>
+      </cg_bead>
+      <cg_bead>
+        <name>10CL3</name>
+        <type>CL3</type>
+        <mapping>cl3_mapping</mapping>
+        <beads>10:CLm:O4 10:CLm:O5 10:CLm:H9 10:CLm:H10</beads>
+      </cg_bead>
+
+    </cg_beads>
+
+    <cg_bonded>
+
+      <bond>
+        <name>bond1</name>
+        <beads>
+           1CL1  2CL1
+           2CL1  3CL1
+           3CL1  4CL1
+           4CL1  5CL1
+           5CL1  6CL1
+           6CL1  7CL1
+           7CL1  8CL1
+           8CL1  9CL1
+           9CL1  10CL1
+           10CL1  1CL1
+        </beads>
+      </bond>
+      <bond>
+        <name>bond2</name>
+        <beads>
+           1CL1  1CL2
+           2CL1  2CL2
+           3CL1  3CL2
+           4CL1  4CL2
+           5CL1  5CL2
+           6CL1  6CL2
+           7CL1  7CL2
+           8CL1  8CL2
+           9CL1  9CL2
+           10CL1  10CL2
+        </beads>
+      </bond>
+      <bond>
+        <name>bond3</name>
+        <beads>
+           1CL1  1CL3
+           2CL1  2CL3
+           3CL1  3CL3
+           4CL1  4CL3
+           5CL1  5CL3
+           6CL1  6CL3
+           7CL1  7CL3
+           8CL1  8CL3
+           9CL1  9CL3
+           10CL1  10CL3
+        </beads>
+      </bond>
+
+      <angle>
+        <name>angle1</name>
+        <beads>
+           1CL1  2CL1  3CL1
+           2CL1  3CL1  4CL1
+           3CL1  4CL1  5CL1
+           4CL1  5CL1  6CL1
+           5CL1  6CL1  7CL1
+           6CL1  7CL1  8CL1
+           7CL1  8CL1  9CL1
+           8CL1  9CL1  10CL1
+           9CL1  10CL1  1CL1
+           10CL1  1CL1  2CL1
+        </beads>
+      </angle>
+      <angle>
+        <name>angle2</name>
+        <beads>
+           1CL2  1CL1  2CL1
+           3CL2  3CL1  4CL1
+           5CL2  5CL1  6CL1
+           7CL2  7CL1  8CL1
+           9CL2  9CL1  10CL1
+        </beads>
+      </angle>
+      <angle>
+        <name>angle3</name>
+        <beads>
+           1CL3  1CL1  2CL1
+           3CL3  3CL1  4CL1
+           5CL3  5CL1  6CL1
+           7CL3  7CL1  8CL1
+           9CL3  9CL1  10CL1
+        </beads>
+      </angle>
+      <angle>
+        <name>angle4</name>
+        <beads>
+           2CL2  2CL1  1CL1
+           4CL2  4CL1  3CL1
+           6CL2  6CL1  5CL1
+           8CL2  8CL1  7CL1
+           10CL2  10CL1  9CL1
+        </beads>
+      </angle>
+      <angle>
+        <name>angle5</name>
+        <beads>
+           2CL3  2CL1  1CL1
+           4CL3  4CL1  3CL1
+           6CL3  6CL1  5CL1
+           8CL3  8CL1  7CL1
+           10CL3  10CL1  9CL1
+        </beads>
+      </angle>
+      <angle>
+        <name>angle6</name>
+        <beads>
+           1CL2  1CL1  1CL3
+           2CL2  2CL1  2CL3
+           3CL2  3CL1  3CL3
+           4CL2  4CL1  4CL3
+           5CL2  5CL1  5CL3
+           6CL2  6CL1  6CL3
+           7CL2  7CL1  7CL3
+           8CL2  8CL1  8CL3
+           9CL2  9CL1  9CL3
+           10CL2  10CL1  10CL3
+        </beads>
+      </angle>
+
+      <dihedral>
+        <name>dihedral1</name>
+        <beads>
+           1CL1  2CL1  3CL1  4CL1
+           2CL1  3CL1  4CL1  5CL1
+           3CL1  4CL1  5CL1  6CL1
+           4CL1  5CL1  6CL1  7CL1
+           5CL1  6CL1  7CL1  8CL1
+           6CL1  7CL1  8CL1  9CL1
+           7CL1  8CL1  9CL1  10CL1
+           8CL1  9CL1  10CL1  1CL1
+           9CL1  10CL1  1CL1  2CL1
+           10CL1  1CL1  2CL1  3CL1
+        </beads>
+      </dihedral>
+      <dihedral>
+        <name>dihedral2</name>
+        <beads>
+           1CL2  1CL1  2CL1  2CL3
+           2CL2  2CL1  3CL1  3CL3
+           3CL2  3CL1  4CL1  4CL3
+           4CL2  4CL1  5CL1  5CL3
+           5CL2  5CL1  6CL1  6CL3
+           6CL2  6CL1  7CL1  7CL3
+           7CL2  7CL1  8CL1  8CL3
+           8CL2  8CL1  9CL1  9CL3
+           9CL2  9CL1  10CL1  10CL3
+           10CL2  10CL1  1CL1  1CL3
+        </beads>
+      </dihedral>
+      <dihedral>
+        <name>dihedral3</name>
+        <beads>
+           1CL3  1CL1  2CL1  2CL2
+           2CL3  2CL1  3CL1  3CL2
+           3CL3  3CL1  4CL1  4CL2
+           4CL3  4CL1  5CL1  5CL2
+           5CL3  5CL1  6CL1  6CL2
+           6CL3  6CL1  7CL1  7CL2
+           7CL3  7CL1  8CL1  8CL2
+           8CL3  8CL1  9CL1  9CL2
+           9CL3  9CL1  10CL1  10CL2
+           10CL3  10CL1  1CL1  1CL2
+        </beads>
+      </dihedral>
+    </cg_bonded>
+
+  </topology>
+
+</cg_molecule>
+

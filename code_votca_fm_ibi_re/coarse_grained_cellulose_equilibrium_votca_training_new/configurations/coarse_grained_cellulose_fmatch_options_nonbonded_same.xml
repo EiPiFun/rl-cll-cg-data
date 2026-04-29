@@ -1,0 +1,46 @@
+<cg>
+
+  <fmatch>
+
+    <frames_per_block>100</frames_per_block>
+
+    <constrainedLS>false</constrainedLS>
+
+  </fmatch>
+
+  <non-bonded>
+    <name>nonbonded11</name>
+    <type1>CL1</type1>
+    <type2>CL1</type2>
+    <fmatch>
+      <min>0.44</min>
+      <max>1.50</max>
+      <step>0.05</step>
+      <out_step>0.01</out_step>
+    </fmatch>
+  </non-bonded>
+  <non-bonded>
+    <name>nonbonded22</name>
+    <type1>CL2</type1>
+    <type2>CL2</type2>
+    <fmatch>
+      <min>0.36</min>
+      <max>1.50</max>
+      <step>0.05</step>
+      <out_step>0.01</out_step>
+    </fmatch>
+  </non-bonded>
+  <non-bonded>
+    <name>nonbonded33</name>
+    <type1>CL3</type1>
+    <type2>CL3</type2>
+    <fmatch>
+      <min>0.31</min>
+      <max>1.50</max>
+      <step>0.05</step>
+      <out_step>0.01</out_step>
+    </fmatch>
+  </non-bonded>
+
+</cg>
+

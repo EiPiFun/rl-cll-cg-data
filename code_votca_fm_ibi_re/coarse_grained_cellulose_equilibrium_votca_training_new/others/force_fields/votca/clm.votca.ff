@@ -1,0 +1,46 @@
+[ moleculetype ]
+; molname    nrexcl
+  CLm   3
+
+[ atoms ]
+; nr type resnr residue    atom cgnr charge mass
+  1  CL1   1   CLm   CL1    1    0.0  68.0
+  2  CL2   1   CLm   CL2    2    0.0  60.0
+  3  CL3   1   CLm   CL3    3    0.0  34.0
+[ bonds ]
+; i  j  funct
+  CL1   CL2   8   2   1.0 ; bond2
+  CL1   CL3   8   3   1.0 ; bond3
+
+[ angles ]
+; i  j  k funct
+  CL2   CL1   CL3  8  6  1.0 ; angle6
+
+[ link ]
+resname "CLm"
+[ bonds ]
+; i  j  funct
+  CL1  +CL1   8   1   1.0 ; bond1
+
+[ angles ]
+; i  j  k funct
+  CL2   CL1  +CL1  8  2  1.0 ; angle2
+  CL3   CL1  +CL1  8  3  1.0 ; angle3
+ +CL2  +CL1   CL1  8  4  1.0 ; angle4
+ +CL3  +CL1   CL1  8  5  1.0 ; angle5
+
+[ dihedrals ]
+; i  j  k  l  funct
+  CL2   CL1  +CL1  +CL3  8  2  1.0 ; dihedral2
+  CL3   CL1  +CL1  +CL2  8  3  1.0 ; dihedral3
+
+[ link ]
+resname "CLm"
+[ angles ]
+; i  j  k funct
+  CL1  +CL1 ++CL1  8  1  1.0 ; angle1
+
+[ dihedrals ]
+; i  j  k  l  funct
+  CL2  +CL1  +CL2 ++CL1  8  1  1.0 ; dihedral1
+

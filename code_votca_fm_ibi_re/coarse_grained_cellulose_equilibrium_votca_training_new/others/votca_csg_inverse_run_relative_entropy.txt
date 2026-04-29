@@ -1,0 +1,29 @@
+csg_dump --top ../all_atom_slant/em.tpr --cg ../configurations/coarse_grained_cellulose_mapping_for_all_atom.xml
+csg_gmxtopol --top ../all_atom_slant/em.tpr --cg ../configurations/coarse_grained_cellulose_mapping_for_all_atom.xml --out ./topol_nonperiodic
+
+csg_map --top ../all_atom_slant/em.tpr --trj ../all_atom_slant/cellulose.gro --cg ../configurations/coarse_grained_cellulose_mapping_for_all_atom.xml --out ./coarse_grained_cellulose.gro
+
+cp ../configurations/coarse_grained_cellulose_equilibrium_nvt.mdp ./coarse_grained_cellulose_equilibrium.mdp
+cp ../configurations/coarse_grained_cellulose_posre_sidechain.itp ./coarse_grained_cellulose_posre.itp
+cp ../configurations/coarse_grained_cellulose_slant.ndx ./coarse_grained_cellulose.ndx
+cp ../configurations/coarse_grained_cellulose_slant.top ./coarse_grained_cellulose.top
+cp ../configurations/coarse_grained_cellulose.itp ./coarse_grained_cellulose.itp
+
+cp ../configurations/coarse_grained_cellulose_mapping_for_coarse_grained.xml ./
+
+boltzmann_last_step_directory=$(ls -d ../coarse_grained_slant_inverse_iterative_boltzmann_inversion/step_*/|tail -n 1)
+
+csg_stat --top $boltzmann_last_step_directory/coarse_grained_cellulose_equilibrium.tpr --trj $boltzmann_last_step_directory/traj.xtc --cg ../configurations/coarse_grained_cellulose_mapping_for_coarse_grained.xml --options ../configurations/coarse_grained_cellulose_stat_options.xml
+
+cp $boltzmann_last_step_directory/table_CL1_CL1.xvg ./table.xvg
+cp $boltzmann_last_step_directory/table_*.xvg ./
+cp $boltzmann_last_step_directory/nonbonded*.pot.new ./
+
+for i in 1 2 3;do
+for ((j = i; j <= 3; j++));do
+python3 ../configurations/generate_fitted_parameters_for_cubic_spline.py ./nonbonded$i$j.pot.new 10 ./nonbonded$i$j.param.init
+done
+done
+
+csg_inverse --options ../configurations/coarse_grained_cellulose_inverse_options_relative_entropy.xml
+

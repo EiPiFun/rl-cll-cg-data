@@ -1,0 +1,40 @@
+csg_dump --top ../all_atom_slant/em.tpr --cg ../configurations/coarse_grained_cellulose_mapping_for_all_atom.xml
+csg_gmxtopol --top ../all_atom_slant/em.tpr --cg ../configurations/coarse_grained_cellulose_mapping_for_all_atom.xml --out ./topol_nonperiodic
+
+csg_map --top ../all_atom_slant/em.tpr --trj ../all_atom_slant/cellulose.gro --cg ../configurations/coarse_grained_cellulose_mapping_for_all_atom.xml --out ./coarse_grained_cellulose.gro
+
+cp ../configurations/coarse_grained_cellulose_equilibrium_nvt.mdp ./coarse_grained_cellulose_equilibrium.mdp
+cp ../configurations/coarse_grained_cellulose_posre_sidechain.itp ./coarse_grained_cellulose_posre.itp
+cp ../configurations/coarse_grained_cellulose_slant.ndx ./coarse_grained_cellulose.ndx
+cp ../configurations/coarse_grained_cellulose_slant.top ./coarse_grained_cellulose.top
+cp ../configurations/coarse_grained_cellulose.itp ./coarse_grained_cellulose.itp
+
+cp ../configurations/coarse_grained_cellulose_mapping_for_coarse_grained.xml ./
+
+csg_stat --top ../all_atom_slant/em.tpr --trj ../all_atom_slant/equilibrium.xtc --cg ../configurations/coarse_grained_cellulose_mapping_for_all_atom.xml --options ../configurations/coarse_grained_cellulose_stat_options.xml
+
+for i in 1 2 3;do
+csg_call --ia-type bond --ia-name bond$i --options ../configurations/coarse_grained_cellulose_inverse_options_iterative_boltzmann_inversion.xml prepare_single ibi
+csg_call --ia-type bond --ia-name bond$i --options ../configurations/coarse_grained_cellulose_inverse_options_iterative_boltzmann_inversion.xml convert_potential gromacs ./bond$i.pot.new ./table_b$i.xvg
+csg_call --ia-type angle --ia-name angle$i --options ../configurations/coarse_grained_cellulose_inverse_options_iterative_boltzmann_inversion.xml prepare_single ibi
+csg_call --ia-type angle --ia-name angle$i --options ../configurations/coarse_grained_cellulose_inverse_options_iterative_boltzmann_inversion.xml convert_potential gromacs ./angle$i.pot.new ./table_a$i.xvg
+csg_call --ia-type dihedral --ia-name dihedral$i --options ../configurations/coarse_grained_cellulose_inverse_options_iterative_boltzmann_inversion.xml prepare_single ibi
+csg_call --ia-type dihedral --ia-name dihedral$i --options ../configurations/coarse_grained_cellulose_inverse_options_iterative_boltzmann_inversion.xml convert_potential gromacs ./dihedral$i.pot.new ./table_d$i.xvg
+done
+
+for i in 4 5 6;do
+csg_call --ia-type angle --ia-name angle$i --options ../configurations/coarse_grained_cellulose_inverse_options_iterative_boltzmann_inversion.xml prepare_single ibi
+csg_call --ia-type angle --ia-name angle$i --options ../configurations/coarse_grained_cellulose_inverse_options_iterative_boltzmann_inversion.xml convert_potential gromacs ./angle$i.pot.new ./table_a$i.xvg
+done
+
+for i in 1 2 3;do
+for ((j = i; j <= 3; j++));do
+csg_call --ia-type non-bonded --ia-name nonbonded$i$j --options ../configurations/coarse_grained_cellulose_inverse_options_iterative_boltzmann_inversion.xml prepare_single ibi
+csg_call --ia-type non-bonded --ia-name nonbonded$i$j --options ../configurations/coarse_grained_cellulose_inverse_options_iterative_boltzmann_inversion.xml convert_potential gromacs ./nonbonded$i$j.pot.new ./table_CL"$i"_CL"$j".xvg
+done
+done
+
+csg_call --ia-type non-bonded --ia-name nonbonded11 --options ../configurations/coarse_grained_cellulose_inverse_options_iterative_boltzmann_inversion.xml convert_potential gromacs ./nonbonded11.pot.new ./table.xvg
+
+csg_inverse --options ../configurations/coarse_grained_cellulose_inverse_options_iterative_boltzmann_inversion.xml
+

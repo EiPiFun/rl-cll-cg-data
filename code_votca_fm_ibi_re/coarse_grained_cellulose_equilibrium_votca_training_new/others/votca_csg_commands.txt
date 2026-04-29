@@ -1,0 +1,13 @@
+export OMP_NUM_THREADS=4
+
+csg_dump --top ..../all_atom.tpr --cg ..../mapping_for_all_atom.xml
+csg_gmxtopol --top ..../all_atom.tpr --cg ..../mapping_for_all_atom.xml --out ..../topol_nonperiodic
+
+csg_map --top ..../all_atom.tpr --trj ..../all_atom.gro --cg ..../mapping_for_all_atom.xml --out ..../coarse_grained.gro
+
+csg_stat --top ..../all_atom.tpr --trj ..../all_atom.xtc --cg ..../mapping_for_all_atom.xml --options ..../inverse_options.xml
+csg_inverse --options ..../options.xml
+
+csg_fmatch --top ..../all_atom.tpr --trj ..../all_atom.trr --cg ..../mapping_for_all_atom.xml --options ..../fmatch_options.xml
+
+

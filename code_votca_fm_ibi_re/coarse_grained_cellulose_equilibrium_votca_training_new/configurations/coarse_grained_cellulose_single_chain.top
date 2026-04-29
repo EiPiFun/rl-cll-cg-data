@@ -1,0 +1,19 @@
+[ defaults ]
+; nbfunc=1 (Lennard-Jones), comb-rule=1
+1    1    no    1.0    1.0
+
+[ atomtypes ]
+; name      mass      charge   ptype    sigma      epsilon
+CL1         68.000    0.000    A        0.000      0.000
+CL2         60.000    0.000    A        0.000      0.000
+CL3         34.000    0.000    A        0.000      0.000
+
+#include "coarse_grained_cellulose.itp"
+
+[ system ]
+; Name
+
+[ molecules ]
+; Compound        #mols
+CLL                 1
+

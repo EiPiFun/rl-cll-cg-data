@@ -1,0 +1,1 @@
+gmx genrestr -f ..../coarse_grained.gro -n ..../coarse_grained.ndx -o ..../coarse_grained_posre.itp

@@ -1,0 +1,67 @@
+<cg>
+
+  <fmatch>
+
+    <frames_per_block>100</frames_per_block>
+
+    <constrainedLS>false</constrainedLS>
+
+  </fmatch>
+
+  <bonded>
+    <name>angle1</name>
+    <fmatch>
+      <min>2.67</min>
+      <max>3.02</max>
+      <step>0.08</step>
+      <out_step>0.01</out_step>
+    </fmatch>
+  </bonded>
+  <bonded>
+    <name>angle2</name>
+    <fmatch>
+      <min>0.97</min>
+      <max>1.40</max>
+      <step>0.08</step>
+      <out_step>0.01</out_step>
+    </fmatch>
+  </bonded>
+  <bonded>
+    <name>angle3</name>
+    <fmatch>
+      <min>1.50</min>
+      <max>1.80</max>
+      <step>0.08</step>
+      <out_step>0.01</out_step>
+    </fmatch>
+  </bonded>
+  <bonded>
+    <name>angle4</name>
+    <fmatch>
+      <min>1.41</min>
+      <max>1.93</max>
+      <step>0.08</step>
+      <out_step>0.01</out_step>
+    </fmatch>
+  </bonded>
+  <bonded>
+    <name>angle5</name>
+    <fmatch>
+      <min>1.58</min>
+      <max>1.97</max>
+      <step>0.08</step>
+      <out_step>0.01</out_step>
+    </fmatch>
+  </bonded>
+  <bonded>
+    <name>angle6</name>
+    <fmatch>
+      <min>2.55</min>
+      <max>3.06</max>
+      <step>0.08</step>
+      <out_step>0.01</out_step>
+    </fmatch>
+  </bonded>
+
+</cg>
+
