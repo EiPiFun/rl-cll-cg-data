@@ -1,4 +1,4 @@
-# Created on Thu Mar  5 17:26:27 CST 2026 by donx@localhost
+# Created on Sat May  2 21:09:56 CST 2026 by donx@localhost
 # called from potential_to_gromacs.sh, version 2025.1 
 # settings file: '/homex/home2/donx/cll_cg_votca_new/coarse_grained_cellulose_equilibrium_votca_training_new/configurations/coarse_grained_cellulose_inverse_options_iterative_boltzmann_inversion.xml'
 # working directory: /homex/home2/donx/cll_cg_votca_new/coarse_grained_cellulose_equilibrium_votca_training_new/coarse_grained_slant_fmatch
