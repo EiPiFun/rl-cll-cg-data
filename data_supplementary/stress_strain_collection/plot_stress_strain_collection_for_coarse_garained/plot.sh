@@ -18,8 +18,8 @@ fi
 for i in vertical horizontal slant;do
 $python_name plot_collection.py "$i"_strain_collection.txt "$i"_stress_collection.txt "" "Strain" "Stress (GPa)" "1.0" "-0.0001" $plot_color $image_file_extension
 $python_name plot_collection.py "$i"_strain_collection.txt "$i"_smoothed_stress_collection.txt "" "Strain" "Stress (GPa)" "1.0" "-0.0001" $plot_color $image_file_extension
-$python_name plot_integral_collection.py "$i"_strain_collection.txt "$i"_stress_collection.txt "" "Strain" "Stress (GPa)" "1.0" "-0.0001" $plot_color $image_file_extension
-$python_name plot_integral_collection.py "$i"_strain_collection.txt "$i"_smoothed_stress_collection.txt "" "Strain" "Stress (GPa)" "1.0" "-0.0001" $plot_color $image_file_extension
+$python_name plot_integral_collection.py "$i"_strain_collection.txt "$i"_stress_collection.txt "" "Strain" "Strain energy (GPa)" "1.0" "-0.0001" $plot_color $image_file_extension
+$python_name plot_integral_collection.py "$i"_strain_collection.txt "$i"_smoothed_stress_collection.txt "" "Strain" "Strain energy (GPa)" "1.0" "-0.0001" $plot_color $image_file_extension
 done
 
 
