@@ -51,7 +51,7 @@ x_axis_offset = 0.06
 y_axis_offset = 0.04
 matplotlib.pyplot.gca().set_position((plot_box_position.x0+x_axis_offset,plot_box_position.y0+y_axis_offset,plot_box_position.width-x_axis_offset,plot_box_position.height-y_axis_offset))
 
-matplotlib.pyplot.ylim(0.0, 12.0)
+matplotlib.pyplot.ylim(-1.0, 12.0)
 
 matplotlib.pyplot.xlabel('Displacement (nm)', fontsize=20)
 matplotlib.pyplot.ylabel('Force (nN)', fontsize=20)
