@@ -14,7 +14,7 @@ chart_xlable = ''
 chart_ylable = r'$\rm{\AA}$'
 
 x1 = (1,2,3,4,5,6)
-x1ticks = (r'$\sigma_{p11}$',r'$\sigma_{p12}$',r'$\sigma_{p13}$',r'$\sigma_{p12}$',r'$\sigma_{p13}$',r'$\sigma_{p13}$')
+x1ticks = (r'$\sigma_{p11}$',r'$\sigma_{p12}$',r'$\sigma_{p13}$',r'$\sigma_{p22}$',r'$\sigma_{p23}$',r'$\sigma_{p33}$')
 
 y1 = numpy.array(((5.100,4.200,4.100,5.100,3.700,5.100),
                   (5.269,4.356,4.486,5.269,3.902,5.269),
