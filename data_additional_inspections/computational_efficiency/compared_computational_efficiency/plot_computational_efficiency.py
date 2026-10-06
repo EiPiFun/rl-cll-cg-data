@@ -11,7 +11,7 @@ except:
 
 chart_title = ''
 chart_xlabel = 'Length and width'
-chart_ylabel = 'Computational efficiency (nm/ns)'
+chart_ylabel = 'Computational efficiency (ns/day)'
 
 x1 = numpy.array(
      (numpy.log(6)/numpy.log(2.0)-3.0,
